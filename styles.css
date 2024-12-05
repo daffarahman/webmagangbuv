@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap");
+
+:root {
+  --white: #fffffc;
+  --black: #000000;
+  --grey: #beb7a4;
+  --orange: #ff7f11;
+  --red: #ff1b1c;
+  --pink: #f5334d;
+}
+
+*,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Gabarito", sans-serif;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: var(--pink);
+}
+
+main section {
+  height: 100vh;
+}
+
+main #section-landing {
+  display: flex;
+  flex-direction: row;
+}
+
+main #section-landing #section-landing-left,
+main #section-landing #section-landing-right {
+  width: 50%;
+  height: 100%;
+}
+
+main #section-landing #section-landing-left {
+  background-color: var(--white);
+  color: var(--pink);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+main #section-landing #section-landing-left #section-landing-title {
+  padding: 2rem;
+}
+
+main #section-landing #section-landing-left #section-landing-title h1 {
+  font-size: 7rem;
+}
+
+main #section-landing #section-landing-left #section-landing-title h2 {
+  font-size: 2rem;
+}
+
+main #section-landing #section-landing-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 2rem 0 0 0;
+}
+
+main #section-about {
+  background-image: url("./img/house-palm.jpg");
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  color: var(--white);
+
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+main #section-about h1 {
+  font-size: 4.5rem;
+  text-align: center;
+}
+
+main #section-quote {
+  background-image: url("./img/holywood-hill.jpg");
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+
+  color: var(--white);
+
+  padding: 2rem;
+}
+
+main #section-quote h1 {
+  font-size: 4.5rem;
+  text-align: center;
+}
+
+main #section-quote p {
+  max-width: 64rem;
+  font-size: 1.75rem;
+  text-align: center;
+
+  word-spacing: 0.1rem;
+  line-height: 2.5rem;
+}
+
+a.button,
+a.button:visited {
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+
+  border-radius: 2rem;
+}
+
+a.button.button-white {
+  border: 1px solid var(--white);
+  color: var(--white);
+}
+
+a.button.button-white:hover {
+  background-color: var(--white);
+  color: var(--black);
+  transition: 200ms;
+}
+
+footer {
+  height: 25vh;
+  background-color: var(--black);
+  color: var(--white);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 1rem;
+
+  color: var(--grey);
+
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  main #section-landing {
+    flex-direction: column;
+  }
+
+  main #section-landing #section-landing-left,
+  main #section-landing #section-landing-right {
+    width: 100%;
+    height: 50%;
+  }
+
+  main #section-landing #section-landing-left #section-landing-title h1 {
+    text-align: center;
+  }
+
+  main #section-landing #section-landing-left #section-landing-title h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  main #section-landing #section-landing-right img {
+    border-radius: 2rem 2rem 0 0;
+  }
+
+  main #section-quote p {
+    font-size: 1.35rem;
+    word-spacing: 0.1rem;
+    line-height: 2.2rem;
+  }
+}
+
+@media only screen and (max-width: 512px) {
+  main #section-about h1 {
+    font-size: 3.75rem;
+  }
+
+  main #section-quote h1 {
+    font-size: 3.75rem;
+  }
+
+  main #section-quote p {
+    font-size: 1.15rem;
+    line-height: 1.5rem;
+  }
+}
